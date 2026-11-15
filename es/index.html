@@ -382,6 +382,8 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
 .mk-card li:last-child{border-bottom:0}
 .mk-card li::before{counter-increment:m;content:counter(m,decimal-leading-zero);position:absolute;left:0;top:11px;font-family:var(--display);font-weight:800;color:var(--cobalt)}
 .mk-card li b{color:var(--ink)}
+.mk-example{margin-top:16px;padding:14px 16px;border-radius:14px;background:var(--paper-2);font-size:13.5px;color:var(--ink-2)}
+.mk-example b{color:var(--vermilion)}
 .mk-note{margin-top:18px;font-size:13px;color:var(--muted)}
 @media (max-width:1024px){.mk-case{grid-template-columns:1fr}.mk-steps{grid-template-columns:1fr}.mk-grid{grid-template-columns:1fr}}
 
@@ -415,8 +417,8 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
     </a>
     <nav aria-label="Navegación principal">
       <ul class="nav-links" id="nav-links">
-        <li><a href="#marketing" data-nav>Marketing</a></li>
         <li><a href="#lavori" data-nav>Trabajos</a></li>
+        <li><a href="#marketing" data-nav>Marketing</a></li>
         <li><a href="#ia" data-nav>IA aplicada</a></li>
         <li><a href="#servizi" data-nav>Competencias</a></li>
         <li><a href="#studio" data-nav>Sobre mí</a></li>
@@ -468,54 +470,6 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
       <div class="marquee-group"><span>Branding</span><span class="star">✳</span><span>Diseño UX/UI</span><span class="star">✳</span><span>Contenidos con IA</span><span class="star">✳</span><span>SEO</span><span class="star">✳</span><span>Google Ads</span><span class="star">✳</span><span>Social Ads</span><span class="star">✳</span><span>Automatización</span><span class="star">✳</span><span>Analítica</span><span class="star">✳</span></div>
     </div>
   </div>
-
-  <section class="section" id="marketing" aria-labelledby="mk-title">
-    <div class="container">
-      <div class="section-head reveal">
-        <div><span class="eyebrow">Marketing de resultados</span><h2 class="h2" id="mk-title" style="margin-top:16px">Clientes nuevos, <span class="serif">no</span> solo visitas.</h2></div>
-        <p>Captación B2B con método, campañas de pago medibles y decisiones basadas en datos. Un caso real y cómo planteo Google Ads y Meta Ads.</p>
-      </div>
-      <article class="mk-case reveal">
-        <div>
-          <span class="mk-kicker">Caso real · Top Quantum · Captación B2B</span>
-          <h3>Nuevos compradores en Francia y Latinoamérica</h3>
-          <div class="mk-big"><b>3.000</b><span>contactos cualificados de compradores potenciales</span></div>
-          <div class="mk-flags"><span class="chip">Francia</span><span class="chip">México</span><span class="chip">Chile</span><span class="chip">Brasil</span></div>
-        </div>
-        <div class="mk-steps">
-          <div><h4>El reto</h4><p>Encontrar compradores profesionales de cuchillas industriales para reciclaje en nuevos mercados, sin comprar bases de datos.</p></div>
-          <div><h4>El método</h4><ol><li>Identifiqué registros públicos de empresas que cumplen ciertas normas y certificaciones del sector.</li><li>Extraje, limpié y segmenté los contactos por país y actividad.</li><li>Contacté a cada segmento con mensajes en su idioma.</li></ol></div>
-          <div><h4>El resultado</h4><p>Unos 3.000 contactos de empresas que ya encajan con el producto. Muchos respondieron y se convirtieron en nuevos clientes.</p></div>
-        </div>
-      </article>
-      <div class="mk-grid">
-        <article class="mk-card reveal">
-          <span class="mk-kicker">Método</span>
-          <h3>Cómo planteo una campaña de Google Ads</h3>
-          <ol>
-            <li><b>Estructura por producto o sector</b>, con palabras clave de concordancia exacta y de frase y una lista de negativas desde el primer día.</li>
-            <li><b>Medición de conversiones</b> (formularios, llamadas, WhatsApp) con GA4 y Google Tag Manager.</li>
-            <li><b>Landing pages dedicadas</b> a cada grupo de anuncios, con un mensaje y una llamada a la acción claros.</li>
-            <li><b>Búsqueda</b> para la demanda que ya existe y <b>Performance Max</b> para productos y catálogo.</li>
-            <li><b>Remarketing</b> para quien visitó la web sin contactar.</li>
-            <li><b>Informe semanal</b> de CPC, CTR, CPA y ROAS, moviendo el presupuesto hacia lo que convierte.</li>
-          </ol>
-        </article>
-        <article class="mk-card reveal" style="--d:.07s">
-          <span class="mk-kicker">Método</span>
-          <h3>Cómo planteo una campaña de Meta Ads</h3>
-          <ol>
-            <li><b>Públicos</b> por intereses y profesión, más <b>lookalike</b> de los clientes actuales.</li>
-            <li><b>Retargeting</b> de visitantes de la web y de quien ha visto los vídeos.</li>
-            <li><b>Tests A/B de creatividades</b> producidas rápido con IA: imágenes, vídeos cortos y textos en varios idiomas.</li>
-            <li><b>Formularios nativos</b> para generar leads B2B sin salir de Facebook o Instagram.</li>
-            <li><b>Píxel y API de Conversiones</b> para medir con precisión.</li>
-            <li><b>Embudo completo</b>: descubrimiento → interés → contacto, con mensajes distintos en cada fase.</li>
-          </ol>
-        </article>
-      </div>
-    </div>
-  </section>
 
   <section class="section" id="lavori" aria-labelledby="work-title">
     <div class="container">
@@ -576,6 +530,64 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
           </div>
           <div class="project-info"><div><h3>Biodanza Toulouse</h3><p>Clases y stages de Biodanza en Toulouse</p></div><span class="project-open" aria-hidden="true">↗</span></div>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="marketing" aria-labelledby="mk-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">Marketing de resultados</span><h2 class="h2" id="mk-title" style="margin-top:16px">Clientes nuevos, <span class="serif">no</span> solo visitas.</h2></div>
+        <p>Captación B2B con método y campañas medibles en Google, Meta y LinkedIn: así planteo cada canal, con decisiones basadas en datos.</p>
+      </div>
+      <div class="mk-grid">
+        <article class="mk-card reveal">
+          <span class="mk-kicker">Captación B2B</span>
+          <h3>Cómo encuentro nuevos clientes</h3>
+          <ol>
+            <li><b>Fuentes públicas cualificadas</b>: registros de empresas que cumplen las normas o certificaciones del sector, ferias y directorios profesionales.</li>
+            <li><b>Extracción, limpieza y segmentación</b> de los contactos por país, actividad y tamaño.</li>
+            <li><b>Mensajes en el idioma de cada mercado</b>, adaptados a cada segmento.</li>
+            <li><b>Seguimiento</b> de respuestas y oportunidades hasta la venta.</li>
+          </ol>
+          <div class="mk-example"><b>Ejemplo real · Top Quantum:</b> unos 3.000 contactos de compradores potenciales en Francia, México, Chile y Brasil. Muchos respondieron y se convirtieron en nuevos clientes.</div>
+        </article>
+        <article class="mk-card reveal" style="--d:.07s">
+          <span class="mk-kicker">Google Ads</span>
+          <h3>Cómo planteo una campaña de Google Ads</h3>
+          <ol>
+            <li><b>Estructura por producto o sector</b>, con palabras clave de concordancia exacta y de frase y una lista de negativas desde el primer día.</li>
+            <li><b>Medición de conversiones</b> (formularios, llamadas, WhatsApp) con GA4 y Google Tag Manager.</li>
+            <li><b>Landing pages dedicadas</b> a cada grupo de anuncios, con un mensaje y una llamada a la acción claros.</li>
+            <li><b>Búsqueda</b> para la demanda que ya existe y <b>Performance Max</b> para productos y catálogo.</li>
+            <li><b>Remarketing</b> para quien visitó la web sin contactar.</li>
+            <li><b>Informe semanal</b> de CPC, CTR, CPA y ROAS, moviendo el presupuesto hacia lo que convierte.</li>
+          </ol>
+        </article>
+        <article class="mk-card reveal">
+          <span class="mk-kicker">Meta Ads</span>
+          <h3>Cómo planteo una campaña de Meta Ads</h3>
+          <ol>
+            <li><b>Públicos</b> por intereses y profesión, más <b>lookalike</b> de los clientes actuales.</li>
+            <li><b>Retargeting</b> de visitantes de la web y de quien ha visto los vídeos.</li>
+            <li><b>Tests A/B de creatividades</b> producidas rápido con IA: imágenes, vídeos cortos y textos en varios idiomas.</li>
+            <li><b>Formularios nativos</b> para generar leads sin salir de Facebook o Instagram.</li>
+            <li><b>Píxel y API de Conversiones</b> para medir con precisión.</li>
+            <li><b>Embudo completo</b>: descubrimiento → interés → contacto, con mensajes distintos en cada fase.</li>
+          </ol>
+        </article>
+        <article class="mk-card reveal" style="--d:.07s">
+          <span class="mk-kicker">LinkedIn</span>
+          <h3>Cómo trabajo LinkedIn como canal B2B</h3>
+          <ol>
+            <li><b>Página de empresa</b> optimizada y perfiles del equipo alineados con el mismo mensaje.</li>
+            <li><b>Contenido regular</b>: casos, productos y vídeos cortos, en varios idiomas, producidos con apoyo de IA.</li>
+            <li><b>LinkedIn Ads</b> segmentados por sector, cargo y tamaño de empresa.</li>
+            <li><b>Lead Gen Forms</b> para captar contactos profesionales directamente en LinkedIn.</li>
+            <li><b>Prospección directa</b>: búsqueda de decisores y mensajes personalizados.</li>
+            <li><b>Medición</b> de alcance, interacción, CTR y leads, ajustando el calendario de publicaciones.</li>
+          </ol>
+        </article>
       </div>
     </div>
   </section>
@@ -728,7 +740,7 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
     <div class="footer-word" aria-hidden="true">MANGANO</div>
     <div class="footer-grid">
       <nav class="footer-links" aria-label="Footer">
-        <a href="#marketing">Marketing</a><a href="#lavori">Trabajos</a><a href="#ia">IA aplicada</a><a href="#servizi">Competencias</a><a href="#studio">Sobre mí</a><a href="#contatti">Contacto</a>
+        <a href="#lavori">Trabajos</a><a href="#marketing">Marketing</a><a href="#ia">IA aplicada</a><a href="#servizi">Competencias</a><a href="#studio">Sobre mí</a><a href="#contatti">Contacto</a>
       </nav>
       <div class="footer-meta">© <span id="year"></span> Gaetano Mangano</div>
     </div>
