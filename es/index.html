@@ -363,8 +363,8 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
 .metric span{font-size:13px}
 #modal-link[hidden]{display:none}
 #modal-next{margin-left:auto}
-.hero-frame .hero-bg{transform:scale(1.04) translate3d(var(--bx,0px),var(--by,0px),0);transition:transform .45s var(--ease)}
-.hero-portrait{position:absolute;left:50%;bottom:0;width:66%;height:auto;z-index:2;pointer-events:none;transform:translateX(-50%);translate:var(--mx,0px) var(--my,0px);transition:translate .35s var(--ease);filter:drop-shadow(0 28px 28px rgba(22,21,15,.35))}
+.hero-frame .hero-bg{transform-origin:50% 100%;transform:scale(1.04) translate3d(var(--bx,0px),0,0);transition:transform .45s var(--ease)}
+.hero-portrait{position:absolute;left:50%;bottom:0;width:66%;height:auto;z-index:2;pointer-events:none;transform:translateX(-50%);translate:var(--mx,0px) var(--py,0px);transition:translate .35s var(--ease);filter:drop-shadow(0 28px 28px rgba(22,21,15,.35))}
 .hero-visual .hero-sticker{top:-16px;right:auto;left:38%}
 .hero-sticker,.hero-chip{z-index:3;translate:var(--sx,0px) var(--sy,0px);transition:translate .3s var(--ease)}
 .mk-case{border:1.5px solid var(--line);border-radius:var(--radius);background:#fff;padding:34px;display:grid;grid-template-columns:1.1fr 2fr;gap:34px;margin-bottom:22px}
@@ -467,7 +467,7 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
           <img class="hero-bg" src="../img/hero-bg.jpg" alt="" width="1100" height="1100" fetchpriority="high">
         </div>
         <img class="hero-portrait" src="../img/gaetano.webp" alt="Ilustración de Gaetano Mangano" width="900" height="899" fetchpriority="high">
-        <div class="hero-sticker">IT · ES · FR · EN · PT</div>
+        <div class="hero-sticker">De la idea al resultado</div>
         <div class="hero-chip"><span class="dot"></span> Disponible para nuevos retos</div>
       </div>
     </div>
@@ -814,7 +814,7 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
     let current='';
     for(const sec of sections){const r=sec.getBoundingClientRect();if(r.top<=window.innerHeight*0.4&&r.bottom>=window.innerHeight*0.4)current=sec.id;}
     navAnchors.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current));
-    if(!reduceMotion){const frame=$('#hero-frame');const y=Math.min(window.scrollY,600);frame.style.setProperty('--py',(y*0.06)+'px');}
+    if(!reduceMotion){const y=Math.min(window.scrollY,600);$('#hero-visual').style.setProperty('--py',(y*0.06)+'px');}
   }
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
   $('#to-top').addEventListener('click',()=>window.scrollTo({top:0,behavior:reduceMotion?'auto':'smooth'}));
@@ -824,8 +824,8 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
   if(!reduceMotion){
     const setL=(x,y)=>{const v=heroVisual.style;
       heroFrame.style.setProperty('--ry',(x*8)+'deg');heroFrame.style.setProperty('--rx',(-y*8)+'deg');
-      heroFrame.style.setProperty('--bx',(-x*10)+'px');heroFrame.style.setProperty('--by',(-y*10)+'px');
-      v.setProperty('--mx',(x*34)+'px');v.setProperty('--my',(y*22)+'px');
+      heroFrame.style.setProperty('--bx',(-x*10)+'px');
+      v.setProperty('--mx',(x*34)+'px');
       v.setProperty('--sx',(x*52)+'px');v.setProperty('--sy',(y*40)+'px');};
     heroVisual.addEventListener('pointermove',e=>{const r=heroVisual.getBoundingClientRect();setL((e.clientX-r.left)/r.width-.5,(e.clientY-r.top)/r.height-.5);});
     heroVisual.addEventListener('pointerleave',()=>setL(0,0));
