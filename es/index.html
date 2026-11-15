@@ -361,6 +361,8 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
 .metric{border:0;background:none;padding:0;border-radius:0}
 .metric b{font-size:34px;line-height:1.1}
 .metric span{font-size:13px}
+#modal-link[hidden]{display:none}
+#modal-next{margin-left:auto}
 @media (max-width:1024px){.projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.projects{grid-template-columns:1fr}}
 </style>
@@ -455,7 +457,7 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
         </a>
         <a class="project-card reveal" href="#arabesk" data-project="arabesk" data-tags="b2b" aria-haspopup="dialog" style="--d:.06s">
           <div class="project-visual shot">
-            <div class="project-tags"><span class="chip">B2B</span><span class="chip">E-commerce</span></div>
+            <div class="project-tags"><span class="chip">B2B</span><span class="chip">4 idiomas</span></div>
             <img src="../img/arabesk.jpg" alt="Captura de la web Arabesk" loading="lazy" width="960" height="600">
           </div>
           <div class="project-info"><div><h3>Arabesk</h3><p>Mayorista para profesionales · arabesk.es</p></div><span class="project-open" aria-hidden="true">↗</span></div>
@@ -486,7 +488,7 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
             <div class="project-tags"><span class="chip">Bienestar</span><span class="chip">React</span></div>
             <img src="../img/biodanza.jpg" alt="Captura de la web Biodanza Toulouse" loading="lazy" width="960" height="600">
           </div>
-          <div class="project-info"><div><h3>Biodanza Toulouse</h3><p>Clases y stages · biodanza-toulouse-pamela.com</p></div><span class="project-open" aria-hidden="true">↗</span></div>
+          <div class="project-info"><div><h3>Biodanza Toulouse</h3><p>Clases y stages de Biodanza en Toulouse</p></div><span class="project-open" aria-hidden="true">↗</span></div>
         </a>
       </div>
     </div>
@@ -720,11 +722,11 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
   // Project modal
   const projects={
     topquantum:{title:'Top Quantum',url:'https://topquantum.com/es/',kicker:'B2B · Industria · España y Francia',color:'#16150F',challenge:'Un fabricante de cuchillas industriales para el reciclaje necesitaba una web a la altura de su catálogo técnico, pensada para compradores profesionales de España y Francia.',response:'Rehice la web desde cero con un nuevo catálogo organizado por material a reciclar (neumáticos, plásticos, madera, metales, RAEE, papel y cartón), para que cada cliente encuentre enseguida las cuchillas para sus máquinas, en español y francés.',deliverables:['Nueva web desde cero','Nuevo catálogo de productos','Estructura por sectores','Textos técnicos ES · FR','Apoyo a las campañas digitales'],metrics:[['B2B','público profesional'],['ES · FR','mercados']]},
-    arabesk:{title:'Arabesk',url:'https://www.arabesk.es/',kicker:'B2B · E-commerce · España',color:'#4E6B4B',challenge:'Un mayorista activo desde el año 2000 necesitaba atender online a tiendas y revendedores de toda España con un catálogo amplio, mostrando los precios solo a profesionales.',response:'Un e-commerce B2B en español con acceso reservado a revendedores, categorías claras (incienso, minerales, joyería, artesanía) y la normativa y la trazabilidad de los productos en primer plano.',deliverables:['Catálogo por categorías','Área reservada a profesionales','Textos en español','Páginas de normativa y marcas','Condiciones de pedido y envío'],metrics:[['B2B','solo profesionales'],['ES','España e islas'],['2000','año de fundación']]},
+    arabesk:{title:'Arabesk',url:'https://www.arabesk.es/',kicker:'B2B · E-commerce · ES · FR · IT · EN',color:'#4E6B4B',challenge:'Un mayorista activo desde el año 2000 necesitaba atender online a tiendas y revendedores de toda España con un catálogo amplio, mostrando los precios solo a profesionales.',response:'Un e-commerce B2B en español, francés, italiano e inglés con acceso reservado a revendedores, categorías claras (incienso, minerales, joyería, artesanía) y la normativa y la trazabilidad de los productos en primer plano.',deliverables:['Catálogo por categorías','Área reservada a profesionales','Versiones ES · FR · IT · EN','Páginas de normativa y marcas','Condiciones de pedido y envío'],metrics:[['B2B','solo profesionales'],['4','idiomas: ES · FR · IT · EN'],['2000','año de fundación']]},
     relaisvoyage:{title:'RelaisVoyage',url:'https://relaisvoyage.com',kicker:'Turismo · Multilingüe · FR · IT · ES',color:'#2743E3',challenge:'Reunir bajo una sola marca los viajes a medida en varios destinos, hablando a clientes franceses, italianos y españoles.',response:'Un portal trilingüe que empieza con una elección sencilla: el destino. Sicilia, Apulia y España ya están online, Francia y Toscana llegarán pronto, con viajes acompañados o por libre.',deliverables:['Arquitectura del portal','Diseño y desarrollo en WordPress','Versiones FR · IT · ES','Páginas de destino','Conexión con VoyageSicile'],metrics:[['3','idiomas'],['3','destinos online'],['2','próximamente']]},
     pouilles:{title:'Les Pouilles',url:'https://relaisvoyage.com/pouilles/',kicker:'Turismo · Landing page · Francés',color:'#1F5E63',challenge:'Presentar Apulia a viajeros francófonos como un destino para descubrir con calma, en pareja, entre amigos o en pequeños grupos de 4 a 8 personas.',response:'Una página de destino dentro de RelaisVoyage con imagen a pantalla completa, un texto que cuenta el territorio (Gargano, Lecce, valle de Itria, Matera) y secciones claras: circuitos, qué ver, preparar el viaje y opiniones de los viajeros.',deliverables:['Diseño de la página','Textos en francés','Sección de circuitos','Guía «qué ver»','Opiniones de viajeros'],metrics:[['FR','mercado francófono'],['4–8','viajeros por grupo'],['2','formas de viajar']]},
     voyagesicile:{title:'VoyageSicile',url:'https://voyagesicile.com',kicker:'Turismo · Web · Francés',color:'#8A5A12',challenge:'Dar a conocer a viajeros francófonos una Sicilia auténtica, lejos del turismo de masas, y convertir las visitas en solicitudes de viajes a medida.',response:'Una web en francés construida en torno a tres rutas de viaje (residencias de excepción, Sicilia rural y Sicilia a tu ritmo), una selección de alojamientos con encanto y un formulario que solo pide nombre, email y teléfono para recibir una primera propuesta.',deliverables:['Estructura y navegación','Diseño de la web','Textos en francés','Páginas de circuitos y alojamientos','Formulario de solicitud','Artículos del blog'],metrics:[['FR','mercado francófono'],['3','rutas de viaje'],['1 clic','para pedir una propuesta']]}
-    ,biodanza:{title:'Biodanza Toulouse',url:'https://biodanza-toulouse-pamela.com',kicker:'Servicios · Web · Francés',color:'#2F4F8F',challenge:'Una facilitadora de Biodanza en Toulouse necesitaba una web clara para presentar sus clases semanales y sus stages, y migrar su sitio desde Framer a una solución propia.',response:'Una web estática hecha a medida con React, Vite y Tailwind: horarios, lugares, stages, galería y contacto. Cada cambio se publica solo: GitHub Actions construye la web y la sube al hosting en uno o dos minutos.',deliverables:['Diseño y desarrollo','React · Vite · Tailwind','Contenidos fáciles de editar','Publicación automática con GitHub Actions','Migración desde Framer'],metrics:[['FR','web en francés'],['1–2 min','para publicar un cambio']]}
+    ,biodanza:{title:'Biodanza Toulouse',url:'',kicker:'Servicios · Web · Francés',color:'#2F4F8F',challenge:'Una facilitadora de Biodanza en Toulouse necesitaba una web clara para presentar sus clases semanales y sus stages, y migrar su sitio desde Framer a una solución propia.',response:'Una web estática hecha a medida con React, Vite y Tailwind: horarios, lugares, stages, galería y contacto. Cada cambio se publica solo: GitHub Actions construye la web y la sube al hosting en uno o dos minutos.',deliverables:['Diseño y desarrollo','React · Vite · Tailwind','Contenidos fáciles de editar','Publicación automática con GitHub Actions','Migración desde Framer'],metrics:[['FR','web en francés'],['1–2 min','para publicar un cambio']]}
   };
   const order=Object.keys(projects);let currentProject=order[0];
   const dialog=$('#project-dialog');
@@ -735,7 +737,7 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
     $('#modal-challenge').textContent=p.challenge;$('#modal-response').textContent=p.response;
     $('#modal-deliverables').innerHTML=p.deliverables.map(d=>`<li>${d}</li>`).join('');
     $('#modal-metrics').innerHTML=p.metrics.map(m=>`<div class="metric"><b>${m[0]}</b><span>${m[1]}</span></div>`).join('');
-    $('#modal-link').href=p.url;
+    $('#modal-link').href=p.url||'#';$('#modal-link').hidden=!p.url;
     if(!dialog.open)dialog.showModal();
   }
   cards.forEach(card=>card.addEventListener('click',e=>{e.preventDefault();openProject(card.dataset.project);}));
