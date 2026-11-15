@@ -389,7 +389,10 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
 .mk-example{margin-top:16px;padding:14px 16px;border-radius:14px;background:var(--paper-2);font-size:13.5px;color:var(--ink-2)}
 .mk-example b{color:var(--vermilion)}
 .mk-wide{grid-column:1/-1}
-.mk-wide ol{columns:2;column-gap:40px}
+.mk-wide ol{columns:3;column-gap:34px}
+.mk-tag{display:inline-block;margin-left:6px;padding:2px 8px;border-radius:99px;background:var(--paper-2);color:var(--ink-2);letter-spacing:.06em;font-size:10.5px}
+.mk-card li::before{display:none}
+.mk-card li{padding-left:0}
 .mk-wide li{break-inside:avoid}
 @media (max-width:1024px){.mk-wide ol{columns:1}}
 .mk-note{margin-top:18px;font-size:13px;color:var(--muted)}
@@ -450,7 +453,7 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
           <span class="line">Marketing, <span class="serif accent">diseño</span></span>
           <span class="line">y contenidos con IA.</span>
         </h1>
-        <p class="lead reveal" style="--d:.12s">Uno estrategia digital, creación de contenidos y aplicación práctica de la IA generativa. Webs, campañas y contenidos multilingües (ES · FR · IT) pensados para dar resultados medibles.</p>
+        <p class="lead reveal" style="--d:.12s">Combino estrategia digital, diseño y creación de contenidos con el uso práctico de la IA. Desarrollo webs, campañas y contenidos multilingües adaptados a cada mercado y orientados a objetivos concretos.</p>
         <div class="hero-actions reveal" style="--d:.18s">
           <a class="btn btn--accent" href="#contatti">Contactar <span class="arrow">→</span></a>
           <a class="btn btn--ghost" href="#lavori">Ver trabajos <span class="arrow">↓</span></a>
@@ -485,9 +488,9 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
       <div class="section-head reveal">
         <div>
           <span class="eyebrow">Webs realizadas</span>
-          <h2 class="h2" id="work-title" style="margin-top:16px">Webs <span class="serif">online</span>, trabajando cada día.</h2>
+          <h2 class="h2" id="work-title" style="margin-top:16px">Webs diseñadas <span class="serif">para cada</span> negocio.</h2>
         </div>
-        <p>Webs que he diseñado y desarrollado, con sus textos y contenidos, para la industria, la venta B2B y el turismo. Abre cada proyecto para ver el reto y lo que he hecho.</p>
+        <p>Una selección de webs que he diseñado y desarrollado para empresas de industria, distribución, turismo y servicios. En cada proyecto explico el reto, mi aportación y la solución.</p>
       </div>
       <div class="filters reveal" role="group" aria-label="Filtrar proyectos">
         <button class="filter-btn" data-filter="all" aria-pressed="true">Todos</button>
@@ -547,66 +550,54 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
     <div class="container">
       <div class="section-head reveal">
         <div><span class="eyebrow">Marketing de resultados</span><h2 class="h2" id="mk-title" style="margin-top:16px">Clientes nuevos, <span class="serif">no</span> solo visitas.</h2></div>
-        <p>Benchmarking, captación B2B y campañas medibles en Google, Meta y LinkedIn: así planteo cada canal, con decisiones basadas en datos.</p>
+        <p>Análisis de la competencia, captación B2B y campañas en Google, Meta y LinkedIn: lo que he hecho y cómo planteo cada canal, con decisiones basadas en datos.</p>
       </div>
       <div class="mk-grid">
-        <article class="mk-card mk-wide reveal">
-          <span class="mk-kicker">Análisis y benchmarking</span>
+        <article class="mk-card mk-wide reveal" style="--d:0s">
+          <span class="mk-kicker">Análisis de la competencia <span class="mk-tag">Experiencia</span></span>
           <h3>Antes de invertir: entender qué funciona y por qué</h3>
           <ol>
-            <li><b>Webs y SEO de la competencia</b>: estructura, contenidos y palabras clave en las que se posicionan.</li>
-            <li><b>Anuncios de la competencia</b>: qué publican en Meta (Biblioteca de anuncios) y en Google (Centro de transparencia publicitaria).</li>
-            <li><b>LinkedIn y redes sociales</b>: frecuencia, formatos y temas que generan más interacción.</li>
-            <li><b>Oferta y precios</b>: cómo presentan productos, catálogos y condiciones de venta.</li>
-            <li><b>Del análisis a la acción</b>: carencias y oportunidades convertidas en prioridades para la web, los contenidos y las campañas.</li>
+            <li><b>Objetivo:</b> detectar qué hacen bien los competidores y dónde hay oportunidades.</li>
+            <li><b>Lo que hice:</b> análisis de webs, SEO, anuncios (Biblioteca de anuncios de Meta, Centro de transparencia de Google), redes sociales y oferta de la competencia.</li>
+            <li><b>Resultado:</b> carencias y oportunidades convertidas en prioridades para la web, los contenidos y las campañas.</li>
           </ol>
-          <div class="mk-example"><b>Ejemplos reales:</b> benchmarking de la competencia para Top Quantum (cuchillas industriales para reciclaje) y Arabesk (mayorista B2B).</div>
+          <div class="mk-example"><b>Ejemplos reales:</b> análisis de la competencia para Top Quantum (cuchillas industriales para reciclaje) y Arabesk (mayorista B2B).</div>
         </article>
-        <article class="mk-card reveal">
-          <span class="mk-kicker">Captación B2B</span>
+        <article class="mk-card reveal" style="--d:0s">
+          <span class="mk-kicker">Captación B2B <span class="mk-tag">Experiencia</span></span>
           <h3>Cómo encuentro nuevos clientes</h3>
           <ol>
-            <li><b>Fuentes públicas cualificadas</b>: registros de empresas que cumplen las normas o certificaciones del sector, ferias y directorios profesionales.</li>
-            <li><b>Extracción, limpieza y segmentación</b> de los contactos por país, actividad y tamaño.</li>
-            <li><b>Mensajes en el idioma de cada mercado</b>, adaptados a cada segmento.</li>
-            <li><b>Seguimiento</b> de respuestas y oportunidades hasta la venta.</li>
+            <li><b>Objetivo:</b> llegar a compradores profesionales en nuevos mercados sin comprar bases de datos.</li>
+            <li><b>Lo que hice:</b> selección de empresas en registros públicos y directorios sectoriales; contactos depurados y segmentados por país y actividad, con mensajes en su idioma.</li>
+            <li><b>Medición:</b> respuestas, oportunidades comerciales y ventas de cada segmento.</li>
           </ol>
-          <div class="mk-example"><b>Ejemplo real · Top Quantum:</b> unos 3.000 contactos de compradores potenciales en Francia, México, Chile y Brasil. Muchos respondieron y se convirtieron en nuevos clientes.</div>
+          <div class="mk-example"><b>Ejemplo real · Top Quantum:</b> identifiqué unos 3.000 contactos de potenciales compradores en Francia, México, Chile y Brasil. La prospección generó respuestas comerciales y nuevos clientes.</div>
         </article>
         <article class="mk-card reveal" style="--d:.07s">
-          <span class="mk-kicker">Google Ads</span>
+          <span class="mk-kicker">Google Ads <span class="mk-tag">Método</span></span>
           <h3>Cómo planteo una campaña de Google Ads</h3>
           <ol>
-            <li><b>Estructura por producto o sector</b>, con palabras clave de concordancia exacta y de frase y una lista de negativas desde el primer día.</li>
-            <li><b>Medición de conversiones</b> (formularios, llamadas, WhatsApp) con GA4 y Google Tag Manager.</li>
-            <li><b>Landing pages dedicadas</b> a cada grupo de anuncios, con un mensaje y una llamada a la acción claros.</li>
-            <li><b>Búsqueda</b> para la demanda que ya existe y <b>Performance Max</b> para productos y catálogo.</li>
-            <li><b>Remarketing</b> para quien visitó la web sin contactar.</li>
-            <li><b>Informe semanal</b> de CPC, CTR, CPA y ROAS, moviendo el presupuesto hacia lo que convierte.</li>
+            <li><b>Objetivo:</b> captar la demanda de quien ya busca el producto o el servicio.</li>
+            <li><b>Planteamiento:</b> campañas por producto o sector, palabras clave seleccionadas y negativas, landing pages dedicadas y remarketing.</li>
+            <li><b>Medición:</b> conversiones con GA4 y Google Tag Manager; CPC, CTR, CPA y ROAS, ajustando la inversión según los resultados.</li>
           </ol>
         </article>
-        <article class="mk-card reveal">
-          <span class="mk-kicker">Meta Ads</span>
+        <article class="mk-card reveal" style="--d:0s">
+          <span class="mk-kicker">Meta Ads <span class="mk-tag">Método</span></span>
           <h3>Cómo planteo una campaña de Meta Ads</h3>
           <ol>
-            <li><b>Públicos</b> por intereses y profesión, más <b>lookalike</b> de los clientes actuales.</li>
-            <li><b>Retargeting</b> de visitantes de la web y de quien ha visto los vídeos.</li>
-            <li><b>Tests A/B de creatividades</b> producidas rápido con IA: imágenes, vídeos cortos y textos en varios idiomas.</li>
-            <li><b>Formularios nativos</b> para generar leads sin salir de Facebook o Instagram.</li>
-            <li><b>Píxel y API de Conversiones</b> para medir con precisión.</li>
-            <li><b>Embudo completo</b>: descubrimiento → interés → contacto, con mensajes distintos en cada fase.</li>
+            <li><b>Objetivo:</b> generar interés y contactos entre públicos que aún no conocen la marca.</li>
+            <li><b>Planteamiento:</b> públicos por intereses y perfiles similares a los clientes actuales, retargeting y piezas publicitarias creadas con apoyo de IA, probadas en tests A/B.</li>
+            <li><b>Medición:</b> Píxel y API de Conversiones; coste por contacto y calidad de los contactos.</li>
           </ol>
         </article>
         <article class="mk-card reveal" style="--d:.07s">
-          <span class="mk-kicker">LinkedIn</span>
-          <h3>Cómo trabajo LinkedIn como canal B2B</h3>
+          <span class="mk-kicker">LinkedIn <span class="mk-tag">Método</span></span>
+          <h3>Cómo planteo LinkedIn como canal B2B</h3>
           <ol>
-            <li><b>Página de empresa</b> optimizada y perfiles del equipo alineados con el mismo mensaje.</li>
-            <li><b>Contenido regular</b>: casos, productos y vídeos cortos, en varios idiomas, producidos con apoyo de IA.</li>
-            <li><b>LinkedIn Ads</b> segmentados por sector, cargo y tamaño de empresa.</li>
-            <li><b>Lead Gen Forms</b> para captar contactos profesionales directamente en LinkedIn.</li>
-            <li><b>Prospección directa</b>: búsqueda de decisores y mensajes personalizados.</li>
-            <li><b>Medición</b> de alcance, interacción, CTR y leads, ajustando el calendario de publicaciones.</li>
+            <li><b>Objetivo:</b> llegar a los responsables de compra de empresas del sector.</li>
+            <li><b>Planteamiento:</b> página de empresa y contenidos regulares en varios idiomas, campañas segmentadas por sector, cargo y tamaño de empresa, y contacto directo con decisores.</li>
+            <li><b>Medición:</b> alcance, interacción, CTR y contactos generados.</li>
           </ol>
         </article>
       </div>
@@ -623,7 +614,7 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
         <a class="step ai-card reveal" href="#evento" data-ai="evento" aria-haspopup="dialog" style="--d:0s"><div class="step-num">01</div><h3>App dinámica para un congreso</h3><p>Del programa en PDF a una web app que muestra qué pasa en cada momento del evento.</p><span class="time">Eventos · Web app</span><span class="ai-more">Ver el caso <span class="arrow">→</span></span></a>
         <a class="step ai-card reveal" href="#packing" data-ai="packing" aria-haspopup="dialog" style="--d:.07s"><div class="step-num">02</div><h3>Packing lists automáticas</h3><p>Packing lists generadas desde la factura, en el idioma del cliente, con control de lo que falta y app en el móvil.</p><span class="time">Logística · Sheets + Apps Script</span><span class="ai-more">Ver el caso <span class="arrow">→</span></span></a>
         <a class="step ai-card reveal" href="#video" data-ai="video" aria-haspopup="dialog" style="--d:.14s"><div class="step-num">03</div><h3>Vídeos promocionales con IA</h3><p>Guion, imágenes y montaje con IA para el canal de YouTube de Top Quantum.</p><span class="time">Vídeo · YouTube</span><span class="ai-more">Ver el caso <span class="arrow">→</span></span></a>
-        <a class="step ai-card reveal" href="#ayudas" data-ai="ayudas" aria-haspopup="dialog" style="--d:.21s"><div class="step-num">04</div><h3>Reservas de ayudas técnicas</h3><p>Reservas, vencimientos, entregas y recogidas de sillas de ruedas y andadores desde una web sencilla.</p><span class="time">Alquiler · Google Sheets</span><span class="ai-more">Ver el caso <span class="arrow">→</span></span></a>
+        <a class="step ai-card reveal" href="#ayudas" data-ai="ayudas" aria-haspopup="dialog" style="--d:.21s"><div class="step-num">04</div><h3>Reservas de ayudas técnicas</h3><p>Interfaz web desarrollada con apoyo de IA para gestionar reservas, entregas y recogidas de sillas de ruedas y andadores.</p><span class="time">Alquiler · Google Sheets</span><span class="ai-more">Ver el caso <span class="arrow">→</span></span></a>
         <a class="step ai-card reveal" href="#doblaje" data-ai="doblaje" aria-haspopup="dialog" style="--d:.07s"><div class="step-num">05</div><h3>Vídeos doblados al francés con IA</h3><p>Edición de vídeos para el mercado francófono, con voz en off y doblaje del español al francés con IA.</p><span class="time">Vídeo · Doblaje · YouTube</span><span class="ai-more">Ver el caso <span class="arrow">→</span></span></a>
       </div>
     </div>
@@ -855,9 +846,9 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
     voyagesicile:{title:'VoyageSicile',url:'https://voyagesicile.com',kicker:'Turismo · Web · Francés',color:'#8A5A12',challenge:'Dar a conocer a viajeros francófonos una Sicilia auténtica, lejos del turismo de masas, y convertir las visitas en solicitudes de viajes a medida.',response:'Una web en francés construida en torno a tres rutas de viaje (residencias de excepción, Sicilia rural y Sicilia a tu ritmo), una selección de alojamientos con encanto y un formulario que solo pide nombre, email y teléfono para recibir una primera propuesta.',deliverables:['Estructura y navegación','Diseño de la web','Textos en francés','Páginas de circuitos y alojamientos','Formulario de solicitud','Artículos del blog'],metrics:[['FR','mercado francófono'],['3','rutas de viaje'],['1 clic','para pedir una propuesta']]}
     ,biodanza:{title:'Biodanza Toulouse',url:'',kicker:'Servicios · Web · Francés',color:'#2F4F8F',challenge:'Una facilitadora de Biodanza en Toulouse necesitaba una web clara para presentar sus clases semanales y sus stages, y migrar su sitio desde Framer a una solución propia.',response:'Una web estática hecha a medida con React, Vite y Tailwind: horarios, lugares, stages, galería y contacto. Cada cambio se publica solo: GitHub Actions construye la web y la sube al hosting en uno o dos minutos.',deliverables:['Diseño y desarrollo','React · Vite · Tailwind','Contenidos fáciles de editar','Publicación automática con GitHub Actions','Migración desde Framer'],metrics:[['FR','web en francés'],['1–2 min','para publicar un cambio']]}
     ,evento:{group:'ia',img:true,title:'App dinámica para un congreso',url:'https://uzutano.github.io/esencia-viva/',kicker:'IA aplicada · Eventos · Web app',color:'#55701F',challenge:'El XVII Encuentro Español de Biodanza (Castellón, 9–12 de octubre de 2026) solo tenía su programa en PDF: cuatro días, salas en paralelo y decenas de sesiones, difíciles de consultar desde el móvil durante el evento.',response:'Con ayuda de la IA transformé el PDF en datos estructurados y construí una web app ligera que muestra en cada momento qué está pasando y dónde, con la opción de consultar cualquier otro día y hora, más una guía digital para los voluntarios. Sin instalar nada: se abre con un enlace o un código QR.',gallery:[['evento-ahora','Simulación: sábado a las 11:40, sesiones en curso y próximas'],['evento-voluntarios','Guía del voluntario en fichas']],listTitle:'5 funcionalidades',deliverables:['«¿Qué pasa ahora?»: sesiones en curso según la hora real, con barra de progreso y cuenta atrás','Programa por días, con franjas, salas por colores y pausas calculadas','Detalle de cada franja: sesiones, salas y facilitadores, con estado «ahora» o «terminado»','«A continuación»: qué viene después y cuánto falta','Guía del voluntario en fichas: emergencias, contactos, normas y acceso a las salas'],metrics:[['PDF → app','programa consultable en vivo'],['4','días de programa'],['20 s','actualización automática']]}
-    ,packing:{group:'ia',title:'Packing lists automáticas',url:'',kicker:'IA aplicada · Logística · Google Sheets + Apps Script',color:'#B5481F',challenge:'Una empresa de distribución con clientes internacionales preparaba a mano las packing lists a partir de las facturas en PDF: cerca de una hora por envío y errores frecuentes al repartir los productos entre cajas y palés.',response:'Un sistema integrado entre Google Sheets, Apps Script y una interfaz web: la IA lee la factura en PDF, reparte los productos y genera la packing list en el idioma del cliente. El equipo consulta e introduce los datos desde una web sencilla, que también se instala como app en el móvil, y la preparación resalta los productos que faltan.',listTitle:'Funcionalidades',deliverables:['Lectura automática de la factura en PDF con IA','Reparto de los productos entre cajas y palés','Packing list en el idioma del cliente','Productos que faltan resaltados durante la preparación','Interfaz web para consultar e introducir datos (Apps Script)','Instalable como app en el móvil'],metrics:[['1 h → 20 min','por envío, con verificación'],['0','errores de reparto'],['📱','también como app en el móvil']]}
+    ,packing:{group:'ia',title:'Packing lists automáticas',url:'',kicker:'IA aplicada · Logística · Google Sheets + Apps Script',color:'#B5481F',challenge:'Una empresa de distribución con clientes internacionales preparaba a mano las packing lists a partir de las facturas en PDF: cerca de una hora por envío y errores frecuentes al repartir los productos entre cajas y palés.',response:'Un sistema integrado entre Google Sheets, Apps Script y una interfaz web: la IA lee la factura en PDF, reparte los productos y genera la packing list en el idioma del cliente. El equipo consulta e introduce los datos desde una web sencilla, que también se instala como app en el móvil, y la preparación resalta los productos que faltan.',listTitle:'Funcionalidades',deliverables:['Lectura automática de la factura en PDF con IA','Reparto de los productos entre cajas y palés','Packing list en el idioma del cliente','Productos que faltan resaltados durante la preparación','Interfaz web para consultar e introducir datos (Apps Script)','Instalable como app en el móvil'],metrics:[['1 h → 20 min','por envío, con verificación'],['✓','control de cada caja antes del envío'],['📱','también como app en el móvil']]}
     ,video:{group:'ia',title:'Vídeos promocionales con IA',url:'https://www.youtube.com/@TOPQUANTUM',linkLabel:'Ver los vídeos en YouTube ',kicker:'IA aplicada · Vídeo · YouTube',color:'#C4302B',challenge:'Producir con frecuencia vídeos promocionales de calidad para el canal de YouTube de una empresa industrial, sin un equipo de producción ni grandes presupuestos.',response:'Para Top Quantum, un flujo de trabajo con IA de principio a fin: ChatGPT y Claude para la idea, el guion y los textos; Ideogram para generar imágenes y gráficos; Canva para el montaje, los textos en pantalla y la versión final lista para publicar.',listTitle:'Cómo lo hago',deliverables:['Idea y guion con ChatGPT y Claude','Imágenes y gráficos generados con Ideogram','Montaje y edición en Canva','Textos y subtítulos en pantalla','Publicación en el canal de YouTube de Top Quantum'],metrics:[['4','herramientas: Canva, Ideogram, ChatGPT y Claude'],['▶','resultados en youtube.com/@TOPQUANTUM']]}
-    ,ayudas:{group:'ia',title:'Reservas y entregas de ayudas técnicas',url:'',kicker:'IA aplicada · Alquiler · Google Sheets',color:'#2F6F8F',challenge:'Una empresa de alquiler de ayudas técnicas (sillas de ruedas, andadores) gestionaba reservas, vencimientos, entregas y recogidas en una hoja de cálculo privada, difícil de consultar y de actualizar sin errores.',response:'Sobre la misma hoja de Google Sheets creé una interfaz web fácil de usar: el equipo introduce las nuevas reservas, controla los vencimientos y organiza entregas y recogidas, mientras los datos siguen en su hoja de siempre.',listTitle:'Funcionalidades',deliverables:['Alta de nuevas reservas desde un formulario web','Inventario de sillas de ruedas, andadores y otras ayudas','Control de vencimientos de los alquileres','Planificación de entregas y recogidas','Datos centralizados en Google Sheets'],metrics:[['Web','interfaz sencilla para el equipo'],['0','software que instalar']]}
+    ,ayudas:{group:'ia',title:'Reservas y entregas de ayudas técnicas',url:'',kicker:'IA aplicada · Alquiler · Google Sheets',color:'#2F6F8F',challenge:'Una empresa de alquiler de ayudas técnicas (sillas de ruedas, andadores) gestionaba reservas, vencimientos, entregas y recogidas en una hoja de cálculo privada, difícil de consultar y de actualizar sin errores.',response:'Desarrollé con apoyo de IA una interfaz web conectada a Google Sheets para gestionar reservas, vencimientos, entregas y recogidas. El equipo trabaja desde una web sencilla y los datos siguen en su hoja de siempre.',listTitle:'Funcionalidades',deliverables:['Alta de nuevas reservas desde un formulario web','Inventario de sillas de ruedas, andadores y otras ayudas','Control de vencimientos de los alquileres','Planificación de entregas y recogidas','Datos centralizados en Google Sheets'],metrics:[['Web','interfaz sencilla para el equipo'],['0','software que instalar']]}
     ,doblaje:{group:'ia',title:'Vídeos doblados al francés con IA',url:'https://www.youtube.com/@SagradaMadreFrance',linkLabel:'Ver los vídeos en YouTube ',kicker:'IA aplicada · Vídeo · Doblaje ES → FR',color:'#6B3FA0',challenge:'Llevar al mercado francófono vídeos producidos en español, con un resultado natural en francés y sin volver a grabar cada vídeo.',response:'Edición de nuevos vídeos para el canal francés: a partir del audio original en español, la IA genera la traducción y el doblaje en francés; después añado las voces en off y hago el montaje en Canva, listo para publicar en YouTube.',listTitle:'Cómo lo hago',deliverables:['Traducción del audio del español al francés con IA','Doblaje en francés a partir de la voz original','Voces en off para el público francófono','Montaje y edición en Canva','Publicación en el canal de YouTube'],metrics:[['ES → FR','doblaje con IA'],['▶','resultados en youtube.com/@SagradaMadreFrance']]}
   };
   const order=Object.keys(projects);let currentProject=order[0];
