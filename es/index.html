@@ -363,6 +363,8 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
 .metric span{font-size:13px}
 #modal-link[hidden]{display:none}
 #modal-next{margin-left:auto}
+.contact-card{display:flex;flex-direction:column;justify-content:center}
+.contact-big{display:block;margin:18px 0 26px;font-family:var(--display);font-weight:800;font-size:clamp(22px,2.6vw,32px);letter-spacing:-.02em;color:var(--ink);word-break:break-all;text-decoration:underline;text-decoration-color:var(--cobalt);text-underline-offset:6px}
 .manifesto-lead{max-width:62ch;font-size:clamp(17px,1.6vw,21px);line-height:1.5;color:rgba(255,255,255,.88);margin:-6px 0 40px}
 .hero-frame .hero-bg{transform-origin:50% 100%;transform:scale(1.04) translate3d(var(--bx,0px),0,0);transition:transform .45s var(--ease)}
 .hero-portrait{position:absolute;left:50%;bottom:0;width:66%;height:auto;z-index:2;pointer-events:none;transform:translateX(-50%);translate:var(--mx,0px) var(--py,0px);transition:translate .35s var(--ease);filter:drop-shadow(0 28px 28px rgba(22,21,15,.35))}
@@ -712,37 +714,16 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
         <h2 class="h2" id="contact-title">Hablemos de cómo puedo <span class="serif">aportar</span> valor.</h2>
         <p>¿Buscas un perfil que combine marketing digital, diseño y aplicación práctica de la IA? Escríbeme para conocer mi experiencia, solicitar mi CV o hablar de una oportunidad profesional.</p>
         <div class="contact-lines">
-          <div class="contact-line"><span class="ico">✉</span><a href="mailto:gaetano.mangano@gmail.com">gaetano.mangano@gmail.com</a></div>
           <div class="contact-line"><span class="ico">◎</span><span>Disponible para trabajo presencial o en remoto</span></div>
-          <div class="contact-line"><span class="ico">↗</span><button class="copy-email" id="copy-email" type="button">Copiar dirección de email</button></div>
         </div>
       </div>
-      <div class="form-card reveal" style="--d:.08s">
-        <form id="brief-form" novalidate>
-          <h3>Escríbeme</h3>
-          <p class="form-note">Al continuar, se abrirá tu aplicación de correo con el mensaje preparado. Podrás revisarlo antes de enviarlo.</p>
-          <div class="field-row">
-            <div class="field"><label for="name">Nombre y apellidos</label><input id="name" name="name" autocomplete="name" required placeholder="¿Cómo te llamas?"><span class="field-error" id="err-name">Escribe tu nombre.</span></div>
-            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="nombre@empresa.es"><span class="field-error" id="err-email">Escribe un email válido.</span></div>
-          </div>
-          <fieldset class="field"><legend>Motivo del contacto</legend>
-            <div class="radio-chips">
-              <input type="radio" name="type" id="type-sito" value="Oferta de empleo" checked><label for="type-sito">Oferta de empleo</label>
-              <input type="radio" name="type" id="type-ia" value="Proyecto freelance"><label for="type-ia">Proyecto freelance</label>
-                            <input type="radio" name="type" id="type-altro" value="Otro"><label for="type-altro">Otro</label>
-            </div>
-          </fieldset>
-          <div class="field"><label for="budget">Empresa</label><input id="budget" name="budget" autocomplete="organization" placeholder="Nombre de la empresa"></div>
-          <div class="field"><label for="message">Mensaje</label><textarea id="message" name="message" required placeholder="Cuéntame el puesto o el proyecto…"></textarea><span class="field-error" id="err-message">Escribe un mensaje (mínimo 20 caracteres).</span></div>
-          <div class="field"><label class="check"><input type="checkbox" id="privacy" required><span>He leído la información y acepto el tratamiento de mis datos para responder a la solicitud.</span></label><span class="field-error" id="err-privacy">Necesitamos tu consentimiento para continuar.</span></div>
-          <div class="form-actions"><button class="btn btn--accent" type="submit">Preparar el email <span class="arrow">→</span></button><span class="form-status" id="form-status" role="status"></span></div>
-        </form>
-        <div class="success-panel" id="success-panel" tabindex="-1">
-          <div class="badge">✓</div>
-          <h3>Mensaje listo.</h3>
-          <p>El texto está listo. Ábrelo en tu programa de correo o cópialo y pégalo donde prefieras. No se ha enviado ningún mensaje automáticamente.</p>
-          <div class="brief-box" id="brief-box" tabindex="0" role="region" aria-label="Mensaje generado"></div>
-          <div class="form-actions"><a class="btn btn--accent" id="mailto-link" href="#">Abrir en el correo <span class="arrow">→</span></a><button class="btn btn--ghost" id="copy-brief" type="button">Copiar mensaje</button><button class="btn btn--ghost btn--sm" id="edit-brief" type="button">Editar</button></div>
+      <div class="form-card contact-card reveal" style="--d:.08s">
+        <h3>Contacto directo</h3>
+        <p class="form-note">Respondo personalmente a cada mensaje.</p>
+        <a class="contact-big" href="mailto:gaetano.mangano@gmail.com?subject=Contacto%20desde%20el%20portfolio">gaetano.mangano@gmail.com</a>
+        <div class="form-actions">
+          <a class="btn btn--accent" href="mailto:gaetano.mangano@gmail.com?subject=Contacto%20desde%20el%20portfolio">Escribir un email <span class="arrow">→</span></a>
+          <button class="btn btn--ghost" id="copy-email-2" type="button">Copiar email</button>
         </div>
       </div>
     </div>
@@ -888,35 +869,8 @@ dialog::backdrop{background:rgba(22,21,15,.6);backdrop-filter:blur(6px)}
   const toast=$('#toast');let toastTimer;
   function showToast(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2400);}
   async function copyText(text,msg){try{await navigator.clipboard.writeText(text);showToast(msg);}catch(e){const ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');showToast(msg);}catch(_){showToast('No se ha podido copiar');}ta.remove();}}
-  $('#copy-email').addEventListener('click',()=>copyText('gaetano.mangano@gmail.com','Email copiado'));
 
-  // Form
-  const form=$('#brief-form'),success=$('#success-panel'),briefBox=$('#brief-box'),mailto=$('#mailto-link'),status=$('#form-status');
-  const DRAFT_KEY='gm-contact-es';
-  function saveDraft(){const data={name:$('#name').value,email:$('#email').value,type:form.querySelector('input[name="type"]:checked')?.value||'',budget:$('#budget').value,message:$('#message').value};try{localStorage.setItem(DRAFT_KEY,JSON.stringify(data));}catch(e){}}
-  function loadDraft(){try{const raw=localStorage.getItem(DRAFT_KEY);if(!raw)return;const d=JSON.parse(raw);$('#name').value=d.name||'';$('#email').value=d.email||'';$('#budget').value=d.budget||'';$('#message').value=d.message||'';const radio=Array.from(form.querySelectorAll('input[name="type"]')).find(r=>r.value===d.type);if(radio)radio.checked=true;}catch(e){}}
-  loadDraft();form.addEventListener('input',saveDraft);form.addEventListener('change',saveDraft);
-  function setError(id,show){const input=$('#'+id),err=$('#err-'+id);if(input)input.setAttribute('aria-invalid',String(show));if(err)err.classList.toggle('show',show);return !show;}
-  function validate(){
-    const nameOk=setError('name',$('#name').value.trim().length<2);
-    const emailOk=setError('email',!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($('#email').value.trim()));
-    const msgOk=setError('message',$('#message').value.trim().length<20);
-    const privOk=setError('privacy',!$('#privacy').checked);
-    return nameOk&&emailOk&&msgOk&&privOk;
-  }
-  ['name','email','message','privacy'].forEach(id=>{$('#'+id).addEventListener('input',()=>{if($('#'+id).getAttribute('aria-invalid')==='true')validate();});});
-  form.addEventListener('submit',e=>{
-    e.preventDefault();status.textContent='';
-    if(!validate()){const first=form.querySelector('[aria-invalid="true"]');if(first)first.focus();showToast('Revisa los campos marcados');return;}
-    const type=form.querySelector('input[name="type"]:checked')?.value||'Otro';
-    const brief=`Hola Gaetano,\n\nsoy ${$('#name').value.trim()} (${$('#email').value.trim()}).\nMotivo: ${type}\nEmpresa: ${$('#budget').value}\n\n${$('#message').value.trim()}\n\n¡Un saludo!`;
-    briefBox.textContent=brief;
-    mailto.href='mailto:gaetano.mangano@gmail.com?subject='+encodeURIComponent(type+' · Portfolio Gaetano Mangano')+'&body='+encodeURIComponent(brief);
-    form.style.display='none';success.classList.add('show');success.focus();
-    try{localStorage.removeItem(DRAFT_KEY);}catch(e){}
-  });
-  $('#copy-brief').addEventListener('click',()=>copyText(briefBox.textContent,'Mensaje copiado'));
-  $('#edit-brief').addEventListener('click',()=>{success.classList.remove('show');form.style.display='';$('#name').focus();});
+  $('#copy-email-2').addEventListener('click',()=>copyText('gaetano.mangano@gmail.com','Email copiado'));
 
   // Dialog focus return
   let lastFocused=null;
